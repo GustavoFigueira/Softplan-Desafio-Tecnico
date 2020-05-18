@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Softplan.DesafioTecnico.Api
+namespace Softplan.DesafioTecnico.FirstApi
 {
     public class Program
     {
