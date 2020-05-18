@@ -10,7 +10,7 @@ namespace Softplan.DesafioTecnico.SecondApi.Controllers
     public class CompoundInterestController : ControllerBase
     {
         [HttpGet]
-        [Route("calculajuros")]
+        [Route("CalculaJuros")]
         public IActionResult Get([FromQuery] decimal valorInicial)
         {
             try

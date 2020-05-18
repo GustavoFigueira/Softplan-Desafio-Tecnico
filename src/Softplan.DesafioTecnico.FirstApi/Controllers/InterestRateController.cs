@@ -21,7 +21,7 @@ namespace Softplan.DesafioTecnico.FirstApi.Controllers
         }
 
         [HttpGet]
-        [Route("taxaJuros")]
+        [Route("TaxaJuros")]
         public IActionResult InterestRate()
         {
             try
