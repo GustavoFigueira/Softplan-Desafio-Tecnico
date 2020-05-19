@@ -1,6 +1,6 @@
 ﻿using Softplan.DesafioTecnico.Application.Extensions;
 using Softplan.DesafioTecnico.Domain.Entities;
-using Softplan.DesafioTecnico.Domain.Interfaces;
+using Softplan.DesafioTecnico.Domain.Services;
 using System;
 
 namespace Softplan.DesafioTecnico.Application.Services
@@ -17,11 +17,11 @@ namespace Softplan.DesafioTecnico.Application.Services
         /// <returns></returns>
         public CompoundInterest Calculate(decimal initialValue, double interestRate, int period)
         {
-            double finalInterestRate = Math.Pow((double)initialValue * (1 + interestRate), period);
+            decimal finalInterestRate = initialValue * (decimal)Math.Pow(1 + interestRate, period);
 
-            var truncatedInterestRate = ValueExtension.Truncate(finalInterestRate, 2);
+            var truncatedInterestRate = ValueExtension.TruncateDecimal(finalInterestRate, 2);
 
-            return new CompoundInterest(initialValue, Convert.ToDecimal(truncatedInterestRate), interestRate, period);
+            return new CompoundInterest(initialValue, truncatedInterestRate, interestRate, period);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Softplan.DesafioTecnico.Application.Services;
-using Softplan.DesafioTecnico.Domain.Interfaces;
+using Softplan.DesafioTecnico.Domain.Services;
 
 namespace Softplan.DesafioTecnico.IoC.Extensions
 {

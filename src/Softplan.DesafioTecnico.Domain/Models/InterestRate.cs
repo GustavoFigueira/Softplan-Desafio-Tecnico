@@ -1,11 +1,6 @@
-﻿using Softplan.DesafioTecnico.Domain.Entities.Base;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Softplan.DesafioTecnico.Domain.Entities
+﻿namespace Softplan.DesafioTecnico.Domain.Entities
 {
-    public struct InterestRate
+    public class InterestRate
     {
         /// <summary>
         /// Valor da taxa de juros

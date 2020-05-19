@@ -14,13 +14,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softplan.DesafioTecnico.UnitTests", "tests\Softplan.DesafioTecnico.UnitTests\Softplan.DesafioTecnico.UnitTests.csproj", "{6E541ACD-94BA-44BA-A760-6C83214564D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softplan.DesafioTecnico.UnitTests", "tests\Softplan.DesafioTecnico.UnitTests\Softplan.DesafioTecnico.UnitTests.csproj", "{6E541ACD-94BA-44BA-A760-6C83214564D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softplan.DesafioTecnico.IntegrationTests", "tests\Softplan.DesafioTecnico.IntegrationTests\Softplan.DesafioTecnico.IntegrationTests.csproj", "{D7BBF9AB-4A90-4FCA-BB07-D36E758A0D60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softplan.DesafioTecnico.IntegrationTests", "tests\Softplan.DesafioTecnico.IntegrationTests\Softplan.DesafioTecnico.IntegrationTests.csproj", "{D7BBF9AB-4A90-4FCA-BB07-D36E758A0D60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softplan.DesafioTecnico.IoC", "src\Softplan.DesafioTecnico.IoC\Softplan.DesafioTecnico.IoC.csproj", "{8E90587A-2209-44F4-A441-B7726BD4399D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softplan.DesafioTecnico.IoC", "src\Softplan.DesafioTecnico.IoC\Softplan.DesafioTecnico.IoC.csproj", "{8E90587A-2209-44F4-A441-B7726BD4399D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softplan.DesafioTecnico.Application", "src\Softplan.DesafioTecnico.Application\Softplan.DesafioTecnico.Application.csproj", "{E7419B79-57BE-4322-894D-FDA199253089}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softplan.DesafioTecnico.Application", "src\Softplan.DesafioTecnico.Application\Softplan.DesafioTecnico.Application.csproj", "{E7419B79-57BE-4322-894D-FDA199253089}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softplan.DesafioTecnico.Infra.Data", "src\Softplan.DesafioTecnico.Infra.Data\Softplan.DesafioTecnico.Infra.Data.csproj", "{C448B3EA-1790-420C-98B5-72C278BDEB09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -116,6 +118,18 @@ Global
 		{E7419B79-57BE-4322-894D-FDA199253089}.Release|x64.Build.0 = Release|Any CPU
 		{E7419B79-57BE-4322-894D-FDA199253089}.Release|x86.ActiveCfg = Release|Any CPU
 		{E7419B79-57BE-4322-894D-FDA199253089}.Release|x86.Build.0 = Release|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Debug|x64.Build.0 = Debug|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Debug|x86.Build.0 = Debug|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Release|x64.ActiveCfg = Release|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Release|x64.Build.0 = Release|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Release|x86.ActiveCfg = Release|Any CPU
+		{C448B3EA-1790-420C-98B5-72C278BDEB09}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

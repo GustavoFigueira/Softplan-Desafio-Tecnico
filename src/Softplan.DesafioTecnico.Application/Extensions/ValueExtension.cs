@@ -4,9 +4,10 @@ namespace Softplan.DesafioTecnico.Application.Extensions
 {
     public static class ValueExtension
     {
-        public static double Truncate(double value, int precision)
+        // Trunca os decimais sem o problema do Trailling Zero
+        public static decimal TruncateDecimal(decimal value, int precision)
         {
-            return Math.Truncate(value * Math.Pow(10, precision)) / Math.Pow(10, precision);
+            return Math.Truncate(value * (decimal)Math.Pow(10, precision)) / (decimal)Math.Pow(10, precision);
         }
     }
 }

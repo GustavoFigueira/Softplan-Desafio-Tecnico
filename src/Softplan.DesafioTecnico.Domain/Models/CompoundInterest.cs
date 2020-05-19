@@ -2,7 +2,7 @@
 
 namespace Softplan.DesafioTecnico.Domain.Entities
 {
-    public class CompoundInterest : BaseEntitiy
+    public class CompoundInterest : BaseEntity
     {
         public CompoundInterest(decimal initialValue, decimal finalValue, double interestRate, int period)
         {

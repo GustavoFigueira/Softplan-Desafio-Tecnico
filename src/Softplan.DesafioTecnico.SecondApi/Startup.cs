@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Softplan.DesafioTecnico.Infra.Data.Context;
 using Softplan.DesafioTecnico.IoC.Extensions;
 using Softplan.DesafioTecnico.SecondApi.Models;
 using System;
@@ -23,6 +24,9 @@ namespace Softplan.DesafioTecnico.SecondApi
         {
             services.AddControllers();
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+            services.AddDbContext<DataContext>();
+            services.AddScoped<DataContext, DataContext>();
+
             services.AddCompoundInterestExtensions();
             services.AddSwaggerGen(c => {
 

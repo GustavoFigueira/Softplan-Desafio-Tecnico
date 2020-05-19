@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
-using Softplan.DesafioTecnico.Domain.Interfaces;
+using Softplan.DesafioTecnico.Domain.Services;
 using Softplan.DesafioTecnico.SecondApi.Models;
 
 namespace Softplan.DesafioTecnico.SecondApi.Controllers
@@ -20,7 +20,7 @@ namespace Softplan.DesafioTecnico.SecondApi.Controllers
         public CompoundInterestController(IOptions<AppSettings> appSettings, ICompoundInterestService compoundInterestService)
         {
             _appSettings = appSettings;
-            _compoundInterestService = compoundInterestService ?? throw new ArgumentNullException(nameof(compoundInterestService));
+            _compoundInterestService = compoundInterestService;
         }
 
         [HttpGet]
@@ -35,7 +35,6 @@ namespace Softplan.DesafioTecnico.SecondApi.Controllers
 
                 if (compoundInterest == null)
                     return BadRequest("Não foi possível efetuar o cálculo.");
-
 
                 return Ok(compoundInterest.FinalValue);
             }
@@ -58,7 +57,7 @@ namespace Softplan.DesafioTecnico.SecondApi.Controllers
                 return interestRate;
             }
 
-            return 0;
+            return 0.01;
         }
     }
 }

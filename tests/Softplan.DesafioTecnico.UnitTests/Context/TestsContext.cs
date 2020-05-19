@@ -6,13 +6,18 @@ namespace Softplan.DesafioTecnico.UnitTests.Context
 {
     public class TestsContext
     {
-        public HttpClient Client { get; set; }
-        private readonly TestServer _server;
+        public HttpClient FirstClient { get; set; }
+        public HttpClient SecondClient { get; set; }
+        private readonly TestServer _firstServer;
+        private readonly TestServer _secondServer;
 
         public TestsContext()
         {
-            _server = new TestServer(new WebHostBuilder().UseStartup<Softplan.DesafioTecnico.FirstApi.Startup>());
-            Client = _server.CreateClient();
+            _firstServer = new TestServer(new WebHostBuilder().UseStartup<FirstApi.Startup>());
+            _secondServer = new TestServer(new WebHostBuilder().UseStartup<SecondApi.Startup>());
+
+            FirstClient = _firstServer.CreateClient();
+            SecondClient = _secondServer.CreateClient();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Softplan.DesafioTecnico.Domain.Entities;
 
-namespace Softplan.DesafioTecnico.Domain.Interfaces
+namespace Softplan.DesafioTecnico.Domain.Services
 {
     public interface ICompoundInterestService
     {

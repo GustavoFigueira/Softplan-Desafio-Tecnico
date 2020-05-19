@@ -3,9 +3,9 @@ using Softplan.DesafioTecnico.Domain.Entities;
 
 namespace Softplan.DesafioTecnico.Infra.Data.Context
 {
-    public class DatabseContext : DbContext
+    public class DataContext : DbContext
     {
-        public DatabseContext(DbContextOptions<DatabseContext> options) : base(options) { }
+        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         // Juros Compostos
         public DbSet<CompoundInterest> CompoundInterest { get; set; }
