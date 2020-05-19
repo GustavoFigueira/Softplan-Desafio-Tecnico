@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "api/InterestRate/TaxaJuros",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "Softplan.DesafioTecnico.FirstApi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Interestrate/taxaJuros",
+      "launchUrl": "api/InterestRate/TaxaJuros",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -29,7 +29,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/Interestrate/taxaJuros",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/InterestRate/TaxaJuros",
       "publishAllPorts": true,
       "useSSL": true
     }

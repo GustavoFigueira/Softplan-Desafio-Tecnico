@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "api/About/ShowMeTheCode",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "Softplan.DesafioTecnico.SecondApi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/CompoundInterest/showmethecode",
+      "launchUrl": "api/About/ShowMeTheCode",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -29,7 +29,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/CompoundInterest/showmethecode",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/About/ShowMeTheCode",
       "publishAllPorts": true,
       "useSSL": true
     }

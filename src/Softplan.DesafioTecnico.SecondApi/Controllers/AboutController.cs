@@ -16,7 +16,7 @@ namespace Softplan.DesafioTecnico.SecondApi.Controllers
         }
 
         [HttpGet]
-        [Route("showmethecode")]
+        [Route("ShowMeTheCode")]
         public IActionResult ShowMeTheCode()
         {
             try

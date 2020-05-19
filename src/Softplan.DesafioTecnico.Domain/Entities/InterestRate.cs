@@ -5,11 +5,16 @@ using System.Text;
 
 namespace Softplan.DesafioTecnico.Domain.Entities
 {
-    public class InterestRate : BaseEntitiy
+    public struct InterestRate
     {
         /// <summary>
-        /// Valor da taxa de juros (%)
+        /// Valor da taxa de juros
         /// </summary>
-        public decimal Value { get; set; }
+        public double Value { get; set; }
+
+        public InterestRate(double _value)
+        {
+            Value = _value;
+        }
     }
 }

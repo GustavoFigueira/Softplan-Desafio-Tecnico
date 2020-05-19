@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Softplan.DesafioTecnico.Domain.Entities;
 using Softplan.DesafioTecnico.FirstApi.Models;
 
 namespace Softplan.DesafioTecnico.FirstApi.Controllers
@@ -26,7 +23,7 @@ namespace Softplan.DesafioTecnico.FirstApi.Controllers
         {
             try
             {
-                var interestRate = _appSettings.Value.InterestRate;
+                var interestRate = new InterestRate(_appSettings.Value.InterestRate).Value;
 
                 return Ok(interestRate);
             }

@@ -5,16 +5,21 @@
     <UserSecretsId>3a53ecbd-2bb8-491e-8d41-f2b2832d3a3b</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
+    <Authors>Gustavo Figueira</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\Web\Softplan\src\Softplan.DesafioTecnico.FirstApi\Softplan.DesafioTecnico.FirstApi.xml</DocumentationFile>
+    <DocumentationFile>D:\Web\Softplan\src\Softplan.DesafioTecnico.FirstApi\documentation.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Softplan.DesafioTecnico.Domain\Softplan.DesafioTecnico.Domain.csproj" />
   </ItemGroup>
 
 

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Softplan.DesafioTecnico.SecondApi.Models
+﻿namespace Softplan.DesafioTecnico.SecondApi.Models
 {
     public class AppSettings
     {
+        public string FirstApiUrl { get; set; }
         public string RepositoryUrl { get; set; }
     }
 }

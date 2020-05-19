@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Softplan.DesafioTecnico.Domain.Entities.Base
 {
@@ -9,6 +7,6 @@ namespace Softplan.DesafioTecnico.Domain.Entities.Base
         /// <summary>
         /// Identificação única
         /// </summary>
-        public Guid Guid { get; set; }
+        public Guid Id { get; set; }
     }
 }
