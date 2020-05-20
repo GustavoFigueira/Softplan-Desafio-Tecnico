@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,10 +25,9 @@ namespace Softplan.DesafioTecnico.SecondApi
         {
             services.AddControllers();
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
-            services.AddDbContext<DataContext>();
             services.AddScoped<DataContext, DataContext>();
-
             services.AddCompoundInterestExtensions();
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSwaggerGen(c => {
 
                 c.SwaggerDoc("v1",
@@ -57,6 +57,9 @@ namespace Softplan.DesafioTecnico.SecondApi
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Juros Compostos");
             });
+
+            // Habilita o Cors para evitar refuse connection entre as duas APIs locais
+            app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
 

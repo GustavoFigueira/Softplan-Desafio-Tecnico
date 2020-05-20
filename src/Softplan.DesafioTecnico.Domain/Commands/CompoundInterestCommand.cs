@@ -1,7 +1,4 @@
 ﻿using Softplan.DesafioTecnico.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Softplan.DesafioTecnico.Domain.Commands
 {

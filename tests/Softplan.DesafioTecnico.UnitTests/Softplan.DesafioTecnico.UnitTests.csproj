@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Softplan.DesafioTecnico.Application\Softplan.DesafioTecnico.Application.csproj" />
     <ProjectReference Include="..\..\src\Softplan.DesafioTecnico.FirstApi\Softplan.DesafioTecnico.FirstApi.csproj" />
     <ProjectReference Include="..\..\src\Softplan.DesafioTecnico.SecondApi\Softplan.DesafioTecnico.SecondApi.csproj" />
   </ItemGroup>

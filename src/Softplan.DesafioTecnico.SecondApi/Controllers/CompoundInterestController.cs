@@ -15,7 +15,7 @@ namespace Softplan.DesafioTecnico.SecondApi.Controllers
     public class CompoundInterestController : ControllerBase
     {
         private readonly IOptions<AppSettings> _appSettings;
-        ICompoundInterestService _compoundInterestService;
+        private ICompoundInterestService _compoundInterestService;
 
         public CompoundInterestController(IOptions<AppSettings> appSettings, ICompoundInterestService compoundInterestService)
         {
@@ -23,18 +23,29 @@ namespace Softplan.DesafioTecnico.SecondApi.Controllers
             _compoundInterestService = compoundInterestService;
         }
 
+        /// <summary>
+        /// Calcula os Juros Compostos com base nos parâmetros de entrada.
+        /// Caso a Taxa de Juros não seja fornecida, ela é buscada na primeira API que deve estar em execução.
+        /// </summary>
+        /// <param name="initialValue">Valor inicial</param>
+        /// <param name="period">Tempo (em meses)</param>
+        /// <param name="interestRate">Taxa de Juros (opcional)</param>
+        /// <returns></returns>
         [HttpGet]
-        [Route("CalculaJuros")]
-        public async Task<IActionResult> Get([FromQuery] decimal valorInicial, [FromQuery] int tempo)
+        [Route("Calculate")]
+        public async Task<IActionResult> Calculate([FromQuery] decimal initialValue, [FromQuery] int period, [FromQuery] double? interestRate)
         {
             try
             {
-                var interestRate = await GetInterestRateFromApi();
+                var defaultInterestRate = interestRate;
 
-                var compoundInterest = _compoundInterestService.Calculate(valorInicial, interestRate, tempo);
+                if (defaultInterestRate == null)
+                    defaultInterestRate = await GetInterestRateFromApi();
+
+                var compoundInterest = _compoundInterestService.Calculate(initialValue, defaultInterestRate.GetValueOrDefault(), period);
 
                 if (compoundInterest == null)
-                    return BadRequest("Não foi possível efetuar o cálculo.");
+                    return BadRequest("Não foi possível calcular os Juros Compostos.");
 
                 return Ok(compoundInterest.FinalValue);
             }
@@ -44,10 +55,14 @@ namespace Softplan.DesafioTecnico.SecondApi.Controllers
             }
         }
 
-        public async Task<double> GetInterestRateFromApi()
+        /// <summary>
+        /// Retorna a Taxa de Juro de uma API em um outro projeto na mesma solução
+        /// </summary>
+        /// <returns></returns>
+        private async Task<double> GetInterestRateFromApi()
         {
             var client = new RestClient(_appSettings.Value.FirstApiUrl);
-            var request = new RestRequest(Method.GET);
+            var request = new RestRequest("api/InterestRate/GetDefault", DataFormat.None);
             var response = await client.ExecuteAsync(request);
 
             if (response.IsSuccessful)

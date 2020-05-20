@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Softplan.DesafioTecnico.FirstApi.Models;
+using Softplan.DesafioTecnico.Infra.Data.Context;
 using System;
 
 namespace Softplan.DesafioTecnico.FirstApi
@@ -22,6 +24,8 @@ namespace Softplan.DesafioTecnico.FirstApi
         {
             services.AddControllers();
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+            services.AddScoped<DataContext, DataContext>();
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSwaggerGen(c => {
 
                 c.SwaggerDoc("v1",
@@ -51,6 +55,9 @@ namespace Softplan.DesafioTecnico.FirstApi
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Taxa de Juros");
             });
+
+            // Habilita o Cors para evitar refuse connection entre as duas APIs locais
+            app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
 

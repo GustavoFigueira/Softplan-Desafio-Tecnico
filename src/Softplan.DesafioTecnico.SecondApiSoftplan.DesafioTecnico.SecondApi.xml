@@ -4,5 +4,11 @@
         <name>Softplan.DesafioTecnico.SecondApi</name>
     </assembly>
     <members>
+        <member name="M:Softplan.DesafioTecnico.SecondApi.Controllers.CompoundInterestController.GetInterestRateFromApi">
+            <summary>
+            Retorna a Taxa de Juro de uma API em um outro projeto na mesma solução
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

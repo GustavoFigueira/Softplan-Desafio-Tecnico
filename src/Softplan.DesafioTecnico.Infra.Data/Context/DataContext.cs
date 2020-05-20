@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Softplan.DesafioTecnico.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Softplan.DesafioTecnico.Infra.Data.Context
 {

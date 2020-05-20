@@ -1,6 +1,8 @@
-﻿namespace Softplan.DesafioTecnico.Domain.Entities
+﻿using Softplan.DesafioTecnico.Domain.Entities.Base;
+
+namespace Softplan.DesafioTecnico.Domain.Entities
 {
-    public class InterestRate
+    public class InterestRate : BaseEntity
     {
         /// <summary>
         /// Valor da taxa de juros

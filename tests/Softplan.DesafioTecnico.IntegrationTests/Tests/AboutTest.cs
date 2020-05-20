@@ -23,7 +23,9 @@ namespace Softplan.DesafioTecnico.IntegrationTests.Tests
         {
             var response = await _testsContext.Client.GetAsync("/ShowMeTheCode");
             response.EnsureSuccessStatusCode();
-            response.StatusCode.Should().Be(HttpStatusCode.OK);
+            Assert.Equal("text/html; charset=utf-8",
+            response.Content.Headers.ContentType.ToString());
+            //response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
 
         [Fact]

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Softplan.DesafioTecnico.SecondApi</name>
+    </assembly>
+    <members>
+        <member name="M:Softplan.DesafioTecnico.SecondApi.Controllers.CompoundInterestController.Calculate(System.Decimal,System.Int32,System.Nullable{System.Double})">
+            <summary>
+            Calcula os Juros Compostos com base nos parâmetros de entrada.
+            Caso a Taxa de Juros não seja fornecida, ela é buscada na primeira API que deve estar em execução.
+            </summary>
+            <param name="initialValue">Valor inicial</param>
+            <param name="period">Tempo (em meses)</param>
+            <param name="interestRate">Taxa de Juros (opcional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Softplan.DesafioTecnico.SecondApi.Controllers.CompoundInterestController.GetInterestRateFromApi">
+            <summary>
+            Retorna a Taxa de Juro de uma API em um outro projeto na mesma solução
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
