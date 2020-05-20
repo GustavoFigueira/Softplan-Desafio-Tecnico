@@ -12,12 +12,12 @@ api/InterestRate/GetDefault
 ```
 api/CompoundInterest/Calculate?initialValue=100&period=5
 ```
+- A taxa de juros (**interestRate**) também pode ser fornecida na query, mas é um comando opcional.
 
-	- A taxa de juros (**interestRate**) também pode ser fornecida na query, mas é um comando opcional.
 ```
 api/CompoundInterest/Calculate?initialValue=100&period=5&interestRate=0.2
 ```
-2. Endpoint: Retorna a [URL](https://github.com/GustavoFigueira/Softplan-Desafio-Tecnico) do projeto no **Github**.
+2. Endpoint: Retorna a [URL](https://github.com/GustavoFigueira/Softplan-Desafio-Tecnico) do projeto no **Github**, sendo definida nas configurações da aplicação no **appsettings.json**..
 ```
 api/About/ShowMeTheCode
 ```
@@ -36,5 +36,3 @@ Além disso, foi criado um app feito em **Flutter** que consome as APIs.
 
 ![Print 1](./docs/app1.png?raw=true "Print App")
 ![Print 2](./docs/app2.png?raw=true "Print App")
-
-
