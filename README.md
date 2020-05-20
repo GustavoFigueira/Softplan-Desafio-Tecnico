@@ -32,6 +32,7 @@ O projeto base foi construído utilizando conceitos provinientes de DDD, Clean C
 
 ### Extras 2
 Além disso, foi criado um app feito em **Flutter** que consome as APIs.
+
 [Repositório no Github](https://github.com/GustavoFigueira/Softplan-Challenge-App)
 ![Print 1](./docs/app1.png?raw=true "Print App")
 ![Print 2](./docs/app2.png?raw=true "Print App")
